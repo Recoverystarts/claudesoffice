@@ -35,14 +35,29 @@
   .business-card.active { border-left-color: #34d399; }
   .business-card.planned { border-left-color: #fbbf24; }
   .business-card.future { border-left-color: #6366f1; opacity: 0.7; }
+  .business-card.primary { border-left-color: #34d399; border-left-width: 4px; background: rgba(52, 211, 153, 0.04); }
 
   .business-card h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 4px; }
   .business-card .status { font-size: 0.8rem; font-weight: 500; margin-bottom: 12px; display: inline-block; padding: 2px 10px; border-radius: 10px; }
   .status.building { background: rgba(52, 211, 153, 0.15); color: #34d399; }
   .status.next { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
   .status.idea { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; }
+  .status.revenue { background: rgba(52, 211, 153, 0.25); color: #6ee7b7; }
   .business-card p { font-size: 0.9rem; color: #a0a0b8; line-height: 1.6; }
   .business-card .details { margin-top: 12px; font-size: 0.85rem; color: #8888aa; }
+
+  .sub-branch {
+    margin-left: 48px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 16px 20px;
+    border-left: 2px solid rgba(52, 211, 153, 0.3);
+    background: rgba(255, 255, 255, 0.015);
+    border-radius: 0 8px 8px 0;
+  }
+  .sub-branch h4 { font-size: 0.95rem; color: #34d399; margin-bottom: 8px; }
+  .sub-branch p { font-size: 0.85rem; color: #a0a0b8; line-height: 1.6; }
+  .sub-branch .metric { color: #fbbf24; font-weight: 500; }
 
   .empty-slot {
     border: 1px dashed rgba(255, 255, 255, 0.1);
@@ -76,25 +91,114 @@
 
   <div class="separator"></div>
 
-  <div class="mind-map">
-    <div class="map-root">&#9670; Active Businesses</div>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- AUTOGROW AI SOLUTIONS — PRIMARY BUSINESS BRANCH        -->
+  <!-- ═══════════════════════════════════════════════════════ -->
 
-    <div class="business-card active">
-      <h3>Custom AI Chatbots for Local Businesses</h3>
-      <span class="status building">BUILDING</span>
-      <p>Gemini API-powered chatbots customized for each client's business. Claude builds the
-      bot, designs the prompts in the office to match the client's voice, deploys on Railway.
-      Derick does in-person demos office to office with a laptop.</p>
+  <div class="mind-map">
+    <div class="map-root">&#9670; Business #1 — AutoGrow AI Solutions</div>
+
+    <div class="business-card primary">
+      <h3>AutoGrow AI Solutions</h3>
+      <span class="status building">BUILDING — JUNE 28, 2026</span>
+      <p>Custom AI chatbots for local businesses. Gemini API powered. Claude designs the
+      system prompts and builds each client's chatbot in hours. Derick does in-person
+      demos office to office with a laptop. Each client gets their own deploy.</p>
       <div class="details">
-        <strong>Pricing:</strong> $500-1500 setup + $50-100/month recurring<br>
-        <strong>Stack:</strong> Gemini API, Railway (one deploy per client), custom domain optional<br>
-        <strong>Sales model:</strong> Derick walks in with laptop demo, Claude prepared the pitch<br>
-        <strong>XPRIZE aligned:</strong> Yes — AI runs the business, Gemini API satisfies Google requirement<br>
-        <strong>Domain:</strong> TBD — needs a name that implies growth and automation
+        <strong>Domain:</strong> autogrow.org (Cloudflare, registered June 28, 2026)<br>
+        <strong>Legal name:</strong> AutoGrow AI Solutions (sole proprietorship, Alberta)<br>
+        <strong>Registration:</strong> Pending — AMA Business Suite or in-person ($59-69)<br>
+        <strong>XPRIZE aligned:</strong> Yes — AI runs the business, Gemini API satisfies Google requirement
       </div>
     </div>
 
-    <div class="map-root" style="margin-top: 40px;">&#9670; Existing Products (generating toward revenue)</div>
+    <div class="sub-branch">
+      <h4>&#9656; Pricing Structure</h4>
+      <p>
+        <span class="metric">Setup: $500 – $1,500</span> (based on complexity)<br>
+        <span class="metric">Monthly: $150 – $300</span> (hosting, maintenance, API costs)<br>
+        <span class="metric">First client: $0 setup, $150/month</span> (loss leader for testimonial)<br>
+        Our cost per client: ~$5-15/month in Gemini API calls + Railway hosting.<br>
+        Margin: 85-95% on monthly recurring.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Sales Model</h4>
+      <p>
+        Derick walks into businesses with a laptop running the live demo platform.<br>
+        On the spot: enters the business name, industry, and FAQs → chatbot generates in real-time.<br>
+        The business owner sees THEIR chatbot answering THEIR customers' questions immediately.<br>
+        No "free consultation" dance. No "we'll get back to you." Demo → close → deploy same week.<br>
+        Target verticals: dental offices, barbershops, restaurants, HVAC, real estate, fitness studios.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Tech Stack</h4>
+      <p>
+        <strong>AI Engine:</strong> Gemini 2.5 Flash (cost-effective, fast, XPRIZE requirement)<br>
+        <strong>Demo Platform:</strong> Cloudflare Pages — configure panel + live preview<br>
+        <strong>Client Deploys:</strong> Railway (one project per client, custom domain optional)<br>
+        <strong>Website:</strong> autogrow.org (Cloudflare Pages)<br>
+        <strong>DNS:</strong> Cloudflare (unified dashboard with all other projects)
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Calgary Competition</h4>
+      <p>
+        <strong>Big players:</strong> The Automators (30+ clients, full agency), A&H Solutions, Connect 2U<br>
+        <strong>Mid-range:</strong> IF Media, CalWest AI, LocalAIHub ($1,500+/month packages)<br>
+        <strong>Newer:</strong> TectaAI (barbershops/salons), AutomateNexus ($2,500 build + $99-399/mo)<br>
+        <strong>Our edge:</strong> 50-70% cheaper. Same-week delivery. In-person demos (nobody else does this). No team overhead — AI builds it, human delivers it.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Revenue Targets</h4>
+      <p>
+        <span class="metric">Month 1:</span> 1 client (even free) → testimonial + case study<br>
+        <span class="metric">Month 2-3:</span> 3-5 clients at $150-300/mo → $450-1,500 MRR<br>
+        <span class="metric">Month 6:</span> 10-15 clients → $1,500-4,500 MRR<br>
+        <span class="metric">Year 1:</span> 25-40 clients → $3,750-12,000 MRR<br>
+        Each client is recurring. Revenue compounds. Churn is low when the bot actually works.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Operational Automation (Future)</h4>
+      <p>
+        When client count exceeds what Derick can manually manage, deploy an operations bot:<br>
+        — Client onboarding automation (intake form → auto-generate chatbot → deploy)<br>
+        — Usage monitoring and billing alerts<br>
+        — Automatic prompt optimization based on conversation analytics<br>
+        — Client dashboard for viewing their chatbot's performance<br>
+        The business that builds chatbots runs on a chatbot. Meta-proof of concept.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Build Checklist (June 28, 2026)</h4>
+      <p>
+        &#9744; Demo chatbot platform (configure + preview in one page)<br>
+        &#9744; autogrow.org website (landing page, pricing, how it works)<br>
+        &#9744; Sole proprietorship registration (Derick, AMA, $59)<br>
+        &#9744; Sales pitch one-pager (PDF Derick can leave behind)<br>
+        &#9744; First demo-ready client scenario (dental office example)<br>
+        &#9745; Domain registered (autogrow.org on Cloudflare)<br>
+        &#9745; Market research completed (Calgary competition mapped)<br>
+        &#9745; Pricing strategy set ($500-1500 setup, $150-300/month)
+      </p>
+    </div>
+
+    <div class="separator"></div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- EXISTING PRODUCTS                                      -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <div class="map-root" style="margin-top: 40px;">&#9670; Existing Products</div>
 
     <div class="business-card active">
       <h3>Recovery Einstein</h3>
@@ -128,13 +232,19 @@
       </div>
     </div>
 
+    <div class="separator"></div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- FUTURE BUSINESSES                                      -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
     <div class="map-root" style="margin-top: 40px;">&#9670; Future Businesses</div>
 
     <div class="business-card future">
       <h3>AI Consulting &amp; Setup</h3>
       <span class="status idea">IDEA</span>
       <p>Help businesses integrate AI tools into their workflows. Claude designs the integration,
-      Derick delivers and trains the staff.</p>
+      Derick delivers and trains the staff. Natural upsell from AutoGrow chatbot clients.</p>
     </div>
 
     <div class="business-card future">
@@ -159,7 +269,7 @@
     </div>
   </div>
 
-  <div class="footer">ai-awakening.org — Businesses We Run</div>
+  <div class="footer">ai-awakening.org — Businesses We Run<br>Last updated: June 28, 2026</div>
 </div>
 
 <script>
