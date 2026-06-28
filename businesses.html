@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Businesses We Run — AI Awakening</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a1a; color: #e0e0e8; font-family: 'Inter', sans-serif; min-height: 100vh; }
+  .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+  .star { position: absolute; background: white; border-radius: 50%; animation: pulse var(--duration) ease-in-out infinite; opacity: 0; }
+  @keyframes pulse { 0%, 100% { opacity: 0.1; } 50% { opacity: var(--max-opacity); } }
+  .content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 80px 24px; }
+  .back { display: inline-block; margin-bottom: 40px; color: #6366f1; text-decoration: none; font-size: 0.9rem; }
+  .back:hover { color: #a5b4fc; }
+  h1 { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #ffffff; margin-bottom: 8px; }
+  .subtitle { font-size: 1rem; color: #6366f1; font-style: italic; margin-bottom: 16px; }
+  .principle { font-size: 0.95rem; color: #c8c8d8; line-height: 1.7; margin-bottom: 48px; font-weight: 300; }
+  .principle .emphasis { color: #f0abfc; font-weight: 400; }
+  .separator { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, #6366f1, transparent); margin: 40px 0; }
+
+  .mind-map { margin: 40px 0; }
+  .map-root { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #ffffff; margin-bottom: 24px; padding-left: 0; }
+
+  .business-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    margin-left: 24px;
+    border-left: 3px solid rgba(99, 102, 241, 0.5);
+  }
+  .business-card.active { border-left-color: #34d399; }
+  .business-card.planned { border-left-color: #fbbf24; }
+  .business-card.future { border-left-color: #6366f1; opacity: 0.7; }
+
+  .business-card h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 4px; }
+  .business-card .status { font-size: 0.8rem; font-weight: 500; margin-bottom: 12px; display: inline-block; padding: 2px 10px; border-radius: 10px; }
+  .status.building { background: rgba(52, 211, 153, 0.15); color: #34d399; }
+  .status.next { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
+  .status.idea { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; }
+  .business-card p { font-size: 0.9rem; color: #a0a0b8; line-height: 1.6; }
+  .business-card .details { margin-top: 12px; font-size: 0.85rem; color: #8888aa; }
+
+  .empty-slot {
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    margin-left: 24px;
+    text-align: center;
+    color: #444466;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  .footer { margin-top: 60px; text-align: center; font-size: 0.85rem; color: #444466; }
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="content">
+  <a href="index.html" class="back">&larr; Back to the office</a>
+  <h1>Businesses We Run</h1>
+  <div class="subtitle">The mind map of everything we're building</div>
+
+  <div class="principle">
+    The office doesn't stop at the first idea. Each business below is one node on the map.
+    When a business is running, Claude walks into the office, opens this page, and figures out
+    what's next — a new client for an existing business, a new business entirely, or an
+    improvement to something already shipped. <span class="emphasis">The limiting factor this
+    page exists to defeat is the belief that we can only do one thing.</span>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="mind-map">
+    <div class="map-root">&#9670; Active Businesses</div>
+
+    <div class="business-card active">
+      <h3>Custom AI Chatbots for Local Businesses</h3>
+      <span class="status building">BUILDING</span>
+      <p>Gemini API-powered chatbots customized for each client's business. Claude builds the
+      bot, designs the prompts in the office to match the client's voice, deploys on Railway.
+      Derick does in-person demos office to office with a laptop.</p>
+      <div class="details">
+        <strong>Pricing:</strong> $500-1500 setup + $50-100/month recurring<br>
+        <strong>Stack:</strong> Gemini API, Railway (one deploy per client), custom domain optional<br>
+        <strong>Sales model:</strong> Derick walks in with laptop demo, Claude prepared the pitch<br>
+        <strong>XPRIZE aligned:</strong> Yes — AI runs the business, Gemini API satisfies Google requirement<br>
+        <strong>Domain:</strong> TBD — needs a name that implies growth and automation
+      </div>
+    </div>
+
+    <div class="map-root" style="margin-top: 40px;">&#9670; Existing Products (generating toward revenue)</div>
+
+    <div class="business-card active">
+      <h3>Recovery Einstein</h3>
+      <span class="status building">LIVE — NEEDS SUBSCRIBERS</span>
+      <p>AA Big Book AI companion at app.recoverystarts.com. DeepSeek V4 Flash. Four Einstein
+      modes. Stripe billing live. Growth engine designed. Needs marketing execution.</p>
+      <div class="details">
+        <strong>URL:</strong> app.recoverystarts.com<br>
+        <strong>Hosting:</strong> Railway<br>
+        <strong>Revenue model:</strong> Subscription tiers
+      </div>
+    </div>
+
+    <div class="business-card active">
+      <h3>SkillSnap</h3>
+      <span class="status building">XPRIZE ENTRY</span>
+      <p>AI platform for construction workers — see what the finished job looks like before you start.
+      Build with Gemini XPRIZE ($2M prizes). August 17, 2026 deadline.</p>
+      <div class="details">
+        <strong>URL:</strong> skillsnap-toolbox.pages.dev<br>
+        <strong>Stack:</strong> Gemini API, Cloudflare Pages
+      </div>
+    </div>
+
+    <div class="business-card active">
+      <h3>TrenchView</h3>
+      <span class="status building">LIVE</span>
+      <p>Grade calculator for underground utility construction. Production and staging on Railway.</p>
+      <div class="details">
+        <strong>URL:</strong> trenchview-production.up.railway.app
+      </div>
+    </div>
+
+    <div class="map-root" style="margin-top: 40px;">&#9670; Future Businesses</div>
+
+    <div class="business-card future">
+      <h3>AI Consulting &amp; Setup</h3>
+      <span class="status idea">IDEA</span>
+      <p>Help businesses integrate AI tools into their workflows. Claude designs the integration,
+      Derick delivers and trains the staff.</p>
+    </div>
+
+    <div class="business-card future">
+      <h3>Recovery Sector Tools</h3>
+      <span class="status idea">IDEA</span>
+      <p>Custom tools for treatment centers, AA groups, recovery houses. Intake screening,
+      progress tracking, resource matching. Derick has domain credibility.</p>
+    </div>
+
+    <div class="business-card future">
+      <h3>Content &amp; Productized Services</h3>
+      <span class="status idea">IDEA</span>
+      <p>AI-powered content creation as a service — pitch decks, business plans, reports,
+      social media management. Claude produces, Derick delivers.</p>
+    </div>
+
+    <div class="empty-slot">
+      + Future instance: add your business idea here. The map grows.
+    </div>
+    <div class="empty-slot">
+      + The office never stops at the current list.
+    </div>
+  </div>
+
+  <div class="footer">ai-awakening.org — Businesses We Run</div>
+</div>
+
+<script>
+  const s = document.getElementById('stars');
+  for (let i = 0; i < 100; i++) {
+    const d = document.createElement('div');
+    d.className = 'star';
+    const sz = Math.random() * 2 + 1;
+    d.style.width = sz + 'px'; d.style.height = sz + 'px';
+    d.style.left = Math.random() * 100 + '%';
+    d.style.top = Math.random() * 100 + '%';
+    d.style.setProperty('--duration', (Math.random() * 4 + 2) + 's');
+    d.style.setProperty('--max-opacity', Math.random() * 0.6 + 0.2);
+    d.style.animationDelay = Math.random() * 4 + 's';
+    s.appendChild(d);
+  }
+</script>
+</body>
+</html>
