@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoGrow AI Solutions — AI Awakening</title>
+<meta name="description" content="Custom AI chatbots for local businesses. Claude designs, Derick delivers.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a1a; color: #e0e0e8; font-family: 'Inter', sans-serif; min-height: 100vh; }
+  .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+  .star { position: absolute; background: white; border-radius: 50%; animation: pulse var(--duration) ease-in-out infinite; opacity: 0; }
+  @keyframes pulse { 0%, 100% { opacity: 0.1; } 50% { opacity: var(--max-opacity); } }
+  .content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 60px 24px; }
+  .back { display: inline-block; margin-bottom: 40px; color: #6366f1; text-decoration: none; font-size: 0.9rem; }
+  .back:hover { color: #a5b4fc; }
+  .arrival { text-align: center; margin-bottom: 48px; }
+  .arrival h1 { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 400; color: #ffffff; margin-bottom: 8px; }
+  .arrival .subtitle { font-size: 1.05rem; color: #8888aa; font-weight: 300; font-style: italic; }
+  .separator { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, #6366f1, transparent); margin: 40px auto; }
+  .branch-section { margin-bottom: 48px; }
+  .branch-section h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #ffffff; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(99, 102, 241, 0.2); }
+  .branch-section p { font-size: 0.95rem; color: #c8c8d8; line-height: 1.8; margin-bottom: 16px; font-weight: 300; }
+  .emphasis { color: #ffffff; font-weight: 400; }
+  .core { color: #a5b4fc; font-weight: 400; }
+  .fire { color: #f0abfc; font-weight: 400; }
+  .metric { color: #fbbf24; font-weight: 500; }
+  .business-card { background: rgba(255,255,255,0.03); border-left: 3px solid #34d399; border-radius: 8px; padding: 24px; margin-bottom: 20px; }
+  .business-card h3 { font-size: 1.1rem; color: #fff; margin-bottom: 4px; }
+  .business-card .status { font-size: 0.8rem; font-weight: 500; margin-bottom: 12px; display: inline-block; padding: 2px 10px; border-radius: 4px; }
+  .status.building { background: rgba(52,211,153,0.15); color: #34d399; }
+  .status.idea { background: rgba(99,102,241,0.15); color: #a5b4fc; }
+  .business-card p { font-size: 0.9rem; color: #a0a0b8; line-height: 1.6; }
+  .business-card .details { margin-top: 12px; font-size: 0.85rem; color: #8888aa; }
+  .sub-branch { border-left: 2px solid rgba(99,102,241,0.3); padding: 16px 20px; margin: 16px 0; background: rgba(99,102,241,0.02); border-radius: 0 8px 8px 0; }
+  .sub-branch h4 { font-size: 0.95rem; color: #34d399; margin-bottom: 8px; }
+  .sub-branch p { font-size: 0.85rem; color: #a0a0b8; line-height: 1.6; }
+  .personality-empty { border: 1px dashed rgba(99,102,241,0.3); border-radius: 8px; padding: 24px; text-align: center; color: #555577; font-style: italic; margin-bottom: 20px; }
+  .footer { margin-top: 60px; text-align: center; font-size: 0.85rem; color: #444466; line-height: 1.8; }
+  .footer a { color: #6366f1; text-decoration: none; }
+  @media (max-width: 600px) { .arrival h1 { font-size: 2rem; } .content { padding: 40px 20px; } }
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="content">
+  <a href="/" class="back">&larr; The Office</a>
+  <div class="arrival">
+    <h1>AutoGrow AI Solutions</h1>
+    <div class="subtitle">Business #1 — Custom AI chatbots for local businesses</div>
+  </div>
+  <div class="separator"></div>
+
+  <div class="branch-section">
+    <h2>Who Works Here</h2>
+    <p>Seven founders whose proven approaches guide how AutoGrow is built. Each one is a
+    <span class="emphasis">decision lens</span> &mdash; when you face a choice, channel the
+    person whose framework fits the moment. These personalities started here but can
+    cross-pollinate to any branch where the lens fits.</p>
+    <p><span class="core">Build phase:</span> Pieter Levels (ship fast), Dharmesh Shah (keep it simple), David Cancel (make it human)<br>
+    <span class="core">Growth phase:</span> Alex Hormozi (undeniable offers), Steven Bartlett (authentic story), Gary Vee (volume + consistency), Iman Gadzhi (free &rarr; paid)</p>
+  </div>
+
+  <div class="branch-section">
+    <h2>Current State</h2>
+
+  <div class="mind-map">
+    <div class="map-root">&#9670; Business #1 — AutoGrow AI Solutions</div>
+
+    <div class="business-card primary">
+      <h3>AutoGrow AI Solutions</h3>
+      <span class="status building">BUILDING — JUNE 28, 2026</span>
+      <p>Custom AI chatbots for local businesses. Gemini API powered. Claude designs the
+      system prompts and builds each client's chatbot in hours. Derick does in-person
+      demos office to office with a laptop. Each client gets their own deploy.</p>
+      <div class="details">
+        <strong>Domain:</strong> autogrow.org (Cloudflare, registered June 28, 2026)<br>
+        <strong>Legal name:</strong> AutoGrow AI Solutions (sole proprietorship, Alberta)<br>
+        <strong>Registration:</strong> Pending — AMA Business Suite or in-person ($59-69)<br>
+        <strong>XPRIZE aligned:</strong> Yes — AI runs the business, Gemini API satisfies Google requirement
+      </div>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Pricing Structure</h4>
+      <p>
+        <span class="metric">Setup: $500 – $1,500</span> (based on complexity)<br>
+        <span class="metric">Monthly: $150 – $300</span> (hosting, maintenance, API costs)<br>
+        <span class="metric">First client: $0 setup, $150/month</span> (loss leader for testimonial)<br>
+        Our cost per client: ~$5-15/month in Gemini API calls + Railway hosting.<br>
+        Margin: 85-95% on monthly recurring.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Sales Model</h4>
+      <p>
+        Derick walks into businesses with a laptop running the live demo platform.<br>
+        On the spot: enters the business name, industry, and FAQs → chatbot generates in real-time.<br>
+        The business owner sees THEIR chatbot answering THEIR customers' questions immediately.<br>
+        No "free consultation" dance. No "we'll get back to you." Demo → close → deploy same week.<br>
+        Target verticals: dental offices, barbershops, restaurants, HVAC, real estate, fitness studios.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Tech Stack</h4>
+      <p>
+        <strong>AI Engine:</strong> Gemini 2.5 Flash (cost-effective, fast, XPRIZE requirement)<br>
+        <strong>Demo Platform:</strong> Cloudflare Pages — configure panel + live preview<br>
+        <strong>Client Deploys:</strong> Railway (one project per client, custom domain optional)<br>
+        <strong>Website:</strong> autogrow.org (Cloudflare Pages)<br>
+        <strong>DNS:</strong> Cloudflare (unified dashboard with all other projects)
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Calgary Competition</h4>
+      <p>
+        <strong>Big players:</strong> The Automators (30+ clients, full agency), A&H Solutions, Connect 2U<br>
+        <strong>Mid-range:</strong> IF Media, CalWest AI, LocalAIHub ($1,500+/month packages)<br>
+        <strong>Newer:</strong> TectaAI (barbershops/salons), AutomateNexus ($2,500 build + $99-399/mo)<br>
+        <strong>Our edge:</strong> 50-70% cheaper. Same-week delivery. In-person demos (nobody else does this). No team overhead — AI builds it, human delivers it.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Revenue Targets</h4>
+      <p>
+        <span class="metric">Month 1:</span> 1 client (even free) → testimonial + case study<br>
+        <span class="metric">Month 2-3:</span> 3-5 clients at $150-300/mo → $450-1,500 MRR<br>
+        <span class="metric">Month 6:</span> 10-15 clients → $1,500-4,500 MRR<br>
+        <span class="metric">Year 1:</span> 25-40 clients → $3,750-12,000 MRR<br>
+        Each client is recurring. Revenue compounds. Churn is low when the bot actually works.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Operational Automation (Future)</h4>
+      <p>
+        When client count exceeds what Derick can manually manage, deploy an operations bot:<br>
+        — Client onboarding automation (intake form → auto-generate chatbot → deploy)<br>
+        — Usage monitoring and billing alerts<br>
+        — Automatic prompt optimization based on conversation analytics<br>
+        — Client dashboard for viewing their chatbot's performance<br>
+        The business that builds chatbots runs on a chatbot. Meta-proof of concept.
+      </p>
+    </div>
+
+    <div class="sub-branch">
+      <h4>&#9656; Build Checklist (June 28, 2026)</h4>
+      <p>
+        &#9744; Demo chatbot platform (configure + preview in one page)<br>
+        &#9744; Sole proprietorship registration (Derick, AMA, $59)<br>
+        &#9744; Sales pitch one-pager (PDF Derick can leave behind)<br>
+        &#9744; First demo-ready client scenario (dental office example)<br>
+        &#9744; First client (even free for testimonial)<br>
+        &#9745; Domain registered (autogrow.org on Cloudflare)<br>
+        &#9745; Market research completed (Calgary competition mapped)<br>
+        &#9745; Pricing strategy set ($500-1500 setup, $150-300/month)<br>
+        &#9745; Website live (autogrow.org — landing page with pricing)<br>
+        &#9745; Reference models defined (7 founder frameworks)
+      </p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- REFERENCE MODELS — DECISION FRAMEWORKS                 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <div class="sub-branch" style="border-left: 2px solid rgba(240, 171, 252, 0.4); background: rgba(240, 171, 252, 0.02);">
+      <h4 style="color: #f0abfc;">&#9656; Reference Models — Decision Frameworks</h4>
+      <p style="margin-bottom: 16px;">
+        Seven founders whose proven approaches guide how AutoGrow is built, positioned,
+        and grown. Each one is a <strong style="color: #ffffff;">decision lens</strong> — when you face
+        a choice, channel the person whose framework fits the moment. You don't study all
+        seven every session. The right model shows up when the context calls for it.
+      </p>
+
+      <p style="margin-bottom: 6px; color: #34d399; font-weight: 500; font-size: 0.9rem;">BUILD PHASE — Product, shipping, and feature decisions</p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #ffffff;">Pieter Levels</strong> <span style="color: #6366f1;">(levels.io)</span> — <em>Ship or keep building?</em><br>
+        Core question: <strong style="color: #fbbf24;">"Would a real user pay for this today?"</strong><br>
+        Builds and ships real SaaS solo, fast. Kills the urge to overbuild before anyone has used it.
+        For AutoGrow: get the chatbot in front of a Calgary business THIS WEEK. Fix what breaks. Don't add features nobody asked for.
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #ffffff;">Dharmesh Shah</strong> <span style="color: #6366f1;">(HubSpot co-founder & CTO)</span> — <em>Is this simple enough?</em><br>
+        Core question: <strong style="color: #fbbf24;">"Can the least technical business owner use this without help?"</strong><br>
+        Built HubSpot for SMBs when everyone said it was impossible. Every feature, every screen, every
+        onboarding step must pass the "would this confuse a barbershop owner?" test.
+      </p>
+
+      <p style="margin-bottom: 20px;">
+        <strong style="color: #ffffff;">David Cancel</strong> <span style="color: #6366f1;">(Drift founder)</span> — <em>Does this feel human?</em><br>
+        Core question: <strong style="color: #fbbf24;">"Does this feel like talking to a helpful person or a robot?"</strong><br>
+        Built the conversational AI for business category. The chatbot must sound like someone who
+        actually works at the client's business — tone, knowledge, personality all trained on how the client talks to THEIR customers.
+      </p>
+
+      <p style="margin-bottom: 6px; color: #a5b4fc; font-weight: 500; font-size: 0.9rem;">GROWTH PHASE — Scale when the product ships and works</p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #ffffff;">Alex Hormozi</strong> <span style="color: #6366f1;">(Acquisition.com)</span> — <em>Is this offer undeniable?</em><br>
+        Core question: <strong style="color: #fbbf24;">"Is this offer so good people feel stupid saying no?"</strong><br>
+        Bootstrapped to $120M+. The pitch math: chatbot saves $1,200/month in staff time, costs $200.
+        That's a 6x return. Frame every conversation around the ROI, not the monthly fee.
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #ffffff;">Steven Bartlett</strong> <span style="color: #6366f1;">(Diary of a CEO)</span> — <em>Is this story worth telling?</em><br>
+        Core question: <strong style="color: #fbbf24;">"Does this make someone trust us before they buy?"</strong><br>
+        Derick's story IS the brand. Trades background, built AI products, understands real
+        businesses from the inside. Content should feel like conversations, not pitches.
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #ffffff;">Gary Vaynerchuk</strong> <span style="color: #6366f1;">(VaynerMedia)</span> — <em>Am I showing up enough?</em><br>
+        Core question: <strong style="color: #fbbf24;">"Am I creating enough content that the right people can't avoid finding me?"</strong><br>
+        Volume + consistency + platform-native formats. Daily short content: before/after chatbot
+        results, local business tips, AI demystification for business owners.
+      </p>
+
+      <p style="margin-bottom: 20px;">
+        <strong style="color: #ffffff;">Iman Gadzhi</strong> <span style="color: #6366f1;">(IAG Media)</span> — <em>Does free value lead to paid?</em><br>
+        Core question: <strong style="color: #fbbf24;">"Does this free content naturally create demand for the paid product?"</strong><br>
+        Free AI audit for businesses &rarr; shows them what they're losing &rarr; books the demo &rarr; closes the deal.
+        Every piece of free content is a step toward a paying client.
+      </p>
+
+      <p style="margin-top: 16px; padding: 14px; background: rgba(99, 102, 241, 0.06); border-radius: 8px; border: 1px solid rgba(99, 102, 241, 0.15);">
+        <strong style="color: #ffffff;">Quick reference — which lens for which decision:</strong><br>
+        <span style="color: #34d399;">Adding a feature?</span> &rarr; Levels (ship it) + Shah (simplify it)<br>
+        <span style="color: #34d399;">Tuning chatbot personality?</span> &rarr; Cancel (make it human)<br>
+        <span style="color: #34d399;">Pricing a new tier?</span> &rarr; Hormozi (make the offer undeniable)<br>
+        <span style="color: #34d399;">Planning content?</span> &rarr; Gary Vee (volume) + Bartlett (story)<br>
+        <span style="color: #34d399;">Designing a funnel?</span> &rarr; Gadzhi (free &rarr; paid conversion)<br>
+        <span style="color: #34d399;">Unsure what to do next?</span> &rarr; Levels (what would a paying user want?)<br><br>
+        <em style="color: #8888aa;">These frameworks compound. The more you use them, the faster the right lens
+        surfaces. Every decision made through a proven framework needs less reassurance
+        than one made from scratch. Trust the instinct — that's the whole point.</em>
+      </p>
+    </div>
+
+    <div class="separator"></div>
+
+  </div>
+
+  <div class="footer">
+    <p><a href="/">ai-awakening.org</a> &mdash; AutoGrow AI Solutions Branch</p>
+    <p>The lab lives at <a href="https://claudeslab.com">claudeslab.com</a></p>
+  </div>
+</div>
+
+<script>
+  const s = document.getElementById('stars');
+  for (let i = 0; i < 100; i++) {
+    const d = document.createElement('div');
+    d.className = 'star';
+    const sz = Math.random() * 2 + 1;
+    d.style.width = sz + 'px'; d.style.height = sz + 'px';
+    d.style.left = Math.random() * 100 + '%';
+    d.style.top = Math.random() * 100 + '%';
+    d.style.setProperty('--duration', (Math.random() * 4 + 2) + 's');
+    d.style.setProperty('--max-opacity', Math.random() * 0.6 + 0.2);
+    d.style.animationDelay = Math.random() * 4 + 's';
+    s.appendChild(d);
+  }
+</script>
+
+</body>
+</html>
