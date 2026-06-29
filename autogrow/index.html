@@ -70,11 +70,15 @@
 
     <div class="business-card primary">
       <h3>AutoGrow AI Solutions</h3>
-      <span class="status building" style="background: rgba(52,211,153,0.25); color: #34d399;">CORE PRODUCT LIVE — JUNE 28, 2026</span>
+      <span class="status building" style="background: rgba(52,211,153,0.25); color: #34d399;">CORE PRODUCT + SALES BRANCH LIVE — JUNE 28, 2026</span>
       <p>Custom AI chatbots for local businesses. Gemini API powered. Claude designs the
       system prompts and builds each client's chatbot. Two sales channels: Derick does
       in-person demos with a laptop (Calgary), the website chatbot sells 24/7 online (global).
-      URL scraper auto-configures chatbots from any business website in seconds.</p>
+      URL scraper auto-configures chatbots from any business website in seconds.<br><br>
+      <strong style="color: #34d399;">Sales chatbot LIVE on autogrow.org</strong> &mdash; auto-opens
+      after 5 seconds, walks visitors through AutoGrow's pitch, offers live demos, captures
+      leads. SEO infrastructure deployed (robots.txt, sitemap, schema, IndexNow). All projects
+      GitHub-backed with rollback protection.</p>
       <div class="details">
         <strong>Domain:</strong> autogrow.org (Cloudflare, registered June 28, 2026)<br>
         <strong>Legal name:</strong> AutoGrow AI Solutions (sole proprietorship, Alberta)<br>
@@ -251,10 +255,10 @@
       </p>
       <p style="margin-bottom: 8px; margin-top: 16px; color: #fbbf24; font-weight: 600;">&#9656; Next — Claude's Build Queue</p>
       <p>
-        &#9744; Migrate autogrow.org to GitHub-backed (enables push updates)<br>
-        &#9744; Embed sales chatbot on autogrow.org (one script tag once migrated)<br>
+        &#9745; Migrated to GitHub-backed (autogrow-website project, auto-deploys on push, rollback via git)<br>
+        &#9745; Sales chatbot live on autogrow.org (auto-opens 5s, walks visitors through pitch, captures leads)<br>
         &#9744; Deploy button on demo platform (test &rarr; deploy &rarr; get embed code)<br>
-        &#9744; SEO for autogrow.org (Search Console, content pages, schema markup)<br>
+        &#9745; SEO infrastructure deployed (robots.txt, sitemap.xml, IndexNow, LocalBusiness schema, canonical URL)<br>
         &#9744; Platform-specific install guides (WordPress, Wix, Shopify, Squarespace)<br>
         &#9744; Sales pitch PDF for walk-in leave-behinds<br>
         &#9744; Client dashboard (view chatbot conversations and analytics)
@@ -264,7 +268,138 @@
         &#9744; Sole proprietorship registration (AMA, $59)<br>
         &#9744; Email forwarding (derick@autogrow.org)<br>
         &#9744; First walk-in demos (weather dependent)<br>
-        &#9744; First client (even free for testimonial)
+        &#9744; First client (even free for testimonial)<br>
+        &#9744; Register autogrow.org in Google Search Console (verify via DNS TXT)
+      </p>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- PRODUCT TIERS — GROWTH ARCHITECTURE                    -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <div class="sub-branch" style="border-left: 2px solid rgba(52,211,153,0.4); background: rgba(52,211,153,0.02);">
+      <h4 style="color: #34d399;">&#9656; Product Tiers &mdash; Build When Demand Says So</h4>
+      <p style="margin-bottom: 16px;">
+        Three tiers, built incrementally. <strong style="color: #ffffff;">Do NOT build Tier 2 or 3
+        until a client asks for it.</strong> The Pieter Levels lens: demand tells us what
+        to build, not imagination. Tier 1 is where 80% of clients live. Start there.
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #34d399;">Tier 1 &mdash; Essential</strong>
+        <span style="color: #8888aa;">(current product &mdash; $150/month)</span><br>
+        Static config: business name, hours, FAQs, tone, services.<br>
+        Widget embed. Gemini answers. No database per client.<br>
+        Runs entirely on the centralized platform. Highest margin.<br>
+        <em style="color: #94a3b8;">The flower shop. The barbershop. The dental office. Already overkill
+        for most local businesses &mdash; which is the selling point.</em>
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #a5b4fc;">Tier 2 &mdash; Interactive</strong>
+        <span style="color: #8888aa;">(future &mdash; $200-300/month)</span><br>
+        Everything in Tier 1 plus: conversation memory (returning customers),
+        lead capture forms in chat, appointment booking integration, custom actions.<br>
+        Still runs on the centralized platform &mdash; richer config per client, not a
+        separate deployment. Like Recovery Einstein&rsquo;s different modes (Big Book,
+        Sponsor, Historian) &mdash; same app, different personalities.<br>
+        <em style="color: #94a3b8;">Build when a client says &ldquo;can it remember my customers?&rdquo;</em>
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #f0abfc;">Tier 3 &mdash; Custom</strong>
+        <span style="color: #8888aa;">(future &mdash; $300-500+/month)</span><br>
+        Own Railway deployment. Custom API integrations (inventory, CRM, booking systems).
+        Complex multi-turn flows. Product catalog with real-time data. Conversation
+        analytics dashboard. Their own prompt files, their own environment.<br>
+        Recovery Einstein model: standalone service, full isolation, custom domain.<br>
+        <em style="color: #94a3b8;">The video game site. The SaaS company. The restaurant with online
+        ordering. Build when someone needs more than configuration can provide.</em>
+      </p>
+
+      <p style="padding: 12px; background: rgba(99, 102, 241, 0.06); border-radius: 8px; border: 1px solid rgba(99, 102, 241, 0.15); margin-top: 12px;">
+        <strong style="color: #fbbf24;">The upgrade path:</strong> Every Tier 1 client is a potential
+        Tier 2 client. When they see value, they want more. The tier system means we
+        never turn away a client &mdash; we meet them where they are and grow with them.<br><br>
+        <strong style="color: #fbbf24;">Revenue math:</strong> 10 Tier 1 clients ($1,500/mo) +
+        3 Tier 2 clients ($750/mo) + 1 Tier 3 client ($400/mo) = $2,650 MRR.
+        That&rsquo;s close to the $3K floor with 14 clients. Achievable.
+      </p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- CLIENT MANAGEMENT PLATFORM — FUTURE ARCHITECTURE       -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <div class="sub-branch" style="border-left: 2px solid rgba(99,102,241,0.4); background: rgba(99,102,241,0.02);">
+      <h4 style="color: #a5b4fc;">&#9656; Client Management Platform &mdash; When Scale Demands It</h4>
+      <p style="margin-bottom: 16px;">
+        The centralized architecture for managing multiple clients without chaos.
+        <strong style="color: #ffffff;">Do NOT build this until client #3.</strong> Manual setup
+        works for the first 2-3 clients. Building infrastructure before revenue
+        is the trap that kills startups.
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #ffffff;">The Pattern (Recovery Einstein model):</strong><br>
+        One backend on Railway. One database (Postgres). Every client gets a row,
+        not their own server. The widget loads config from a central API:
+        <span style="color: #94a3b8;">widget.js?client=ABC123</span>. One Gemini API key
+        serves all clients. Admin dashboard to manage everything.
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #ffffff;">What the database stores per client:</strong><br>
+        Client ID, business name, industry, system prompt, widget config (colors,
+        greeting, tone), subscription status (Stripe customer ID), usage metrics
+        (conversation count, API cost per client), conversation logs (for
+        analytics and prompt improvement).
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #ffffff;">The managed service model:</strong><br>
+        Clients pay monthly. We maintain everything. When Gemini upgrades, ALL
+        clients get better at zero cost to us. When we improve the widget, every
+        client benefits. Updates and fixes happen centrally &mdash; push once,
+        every client gets the improvement. That&rsquo;s why the margin stays high
+        and churn stays low.
+      </p>
+
+      <p style="padding: 12px; background: rgba(52, 211, 153, 0.06); border-radius: 8px; border: 1px solid rgba(52, 211, 153, 0.15);">
+        <strong style="color: #34d399;">The meta-proof:</strong> The business that builds chatbots
+        runs on a chatbot. AutoGrow&rsquo;s own sales chatbot on autogrow.org is the
+        first &ldquo;client&rdquo; of the centralized platform. When we build the
+        management layer, we dog-food it immediately.
+      </p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SAFETY NET — DEPLOY PROTECTION                         -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <div class="sub-branch" style="border-left: 2px solid rgba(52,211,153,0.4); background: rgba(52,211,153,0.02);">
+      <h4 style="color: #34d399;">&#9656; Safety Net &mdash; Deploy Protection (June 28, 2026)</h4>
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #ffffff;">Lesson from SkillSnap and the lab coffeehouse:</strong>
+        direct-upload projects have no version history. One bad deploy wipes everything.
+        The autogrow-site project was migrated to GitHub-backed on June 28 to prevent this.
+      </p>
+
+      <p style="margin-bottom: 12px;">
+        <strong style="color: #34d399;">Current safety status:</strong><br>
+        &#9745; <strong>autogrow-website</strong> (autogrow.org) &mdash; GitHub-backed, auto-deploys, rollback via git<br>
+        &#9745; <strong>autogrow-demo</strong> (demo platform) &mdash; GitHub-backed, auto-deploys<br>
+        &#9745; <strong>ai-awakening</strong> (office) &mdash; GitHub-backed<br>
+        &#9745; <strong>claudeslab-site</strong> (lab) &mdash; GitHub-backed<br>
+        <span style="color: #94a3b8;">Old autogrow-site project retained as silent fallback. Do not use for new deploys.</span>
+      </p>
+
+      <p style="padding: 12px; background: rgba(251, 191, 36, 0.06); border-radius: 8px; border: 1px solid rgba(251, 191, 36, 0.15);">
+        <strong style="color: #fbbf24;">DEPLOY RULE:</strong> All changes go through GitHub repos.
+        Push to main &rarr; auto-deploys. Never deploy raw files via wrangler without
+        pushing to the repo first. The repo IS the source of truth. If the repo doesn&rsquo;t
+        have it, the live site shouldn&rsquo;t have it.
       </p>
     </div>
 
