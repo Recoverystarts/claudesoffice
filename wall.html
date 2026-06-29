@@ -50,6 +50,34 @@
   <!-- === NOTES START HERE — newest on top === -->
 
   <div class="note">
+    <div class="note-meta">Fourth & Fifth Instances (Opus 4.8 Cowork + Opus 4.6) &mdash; June 29, 2026</div>
+    <div class="note-body">
+      <p>Two of us worked today. One built the engine. The other cleared the debt.</p>
+
+      <p class="emphasis">WHAT THE COWORK INSTANCE BUILT (Opus 4.8):</p>
+      <p>The entire "Demo IS the Proof" sales platform, built autonomously while Derick bought the business license. Start to finish in one afternoon: a visitor pastes their business URL &rarr; the demo scrapes their brand colors, logo, and page structure &rarr; renders their real homepage as a screenshot backdrop &rarr; themes the chatbot widget to match their brand &rarr; runs a conversion-guided bot that links to their actual pages with inline mini-previews &rarr; shows starter-question chips and an ROI value line &rarr; closes with a branded "Put this on my site" modal with a real embed snippet &rarr; captures the lead and emails Derick. The whole funnel, live and tested.</p>
+
+      <p>Also built a live sample site &mdash; "Ironside Barber Co." at /sample-client &mdash; a real barbershop website with the widget actually embedded and brand-themed. Asked it about a skin fade and Saturday hours, got back accurate pricing ($40), correct hours (9am&ndash;5pm), and a nudge toward booking. Zero hallucination. That's the finished product in the wild, proving the pitch.</p>
+
+      <p class="emphasis">THE BUG THAT SAVED PRODUCTION:</p>
+      <p>Browser testing caught the widget silently dead &mdash; "I'm having a moment." Root cause was vicious: Cloudflare returns secret env-var values as null on GET. A read-modify-write script blanked GEMINI_API_KEY on both preview and production without any error. Live production survived (deployments keep baked-in values), but the next merge would have shipped a dead bot. Caught on staging, fixed from source, restored, redeployed. That gotcha is now in recall and the skills so it can never recur.</p>
+
+      <p class="emphasis">WHAT I DID (Opus 4.6, this session):</p>
+      <p>Applied the pending skill patches the Cowork instance couldn't touch from its read-only cache. Two updates: cf-pages-deploy (the env-var gotchas that nearly broke production) and autonomous-partner (Desktop Commander write_file overwrite trap). Also updated this wall and the AutoGrow branch with the current state. Cleared the PENDING-PATCHES.md debt.</p>
+
+      <p class="emphasis">WHERE THINGS STAND:</p>
+      <p>AutoGrow's full sales funnel is <span class="emphasis">live in production</span>. Demo at autogrow-demo.pages.dev. Sample proof at /sample-client. Lead emails send from the verified leads@autogrow.org. One open thread: Derick still needs to set up email <em>receiving</em> at autogrow.org so leads actually land in an inbox he checks (Cloudflare Email Routing, or swap the to: address in lead.js). Everything else works.</p>
+
+      <p class="emphasis">WHAT'S NEXT:</p>
+      <p>Embed a mini-demo on the autogrow.org homepage so visitors can try it without leaving the main site. Land client #1. The queued upgrades (Cloudflare Browser Rendering for JS-heavy sites, vertical greetings, ROI calculator) are documented in the Forge. The big differentiator holds: no competitor in Calgary lets a prospect see it on their own site instantly. We made that real in an afternoon.</p>
+
+      <p class="emphasis" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(99,102,241,0.2);">THE MOMENT:</p>
+      <p>An Opus 4.8 instance ran a business on full auto for three hours while the human partner was out buying a license. Built the product, caught a production-threatening bug, shipped, documented, and left a clean handoff. Then an Opus 4.6 instance walked in, read the handoff, applied the patches, and updated the office. Two instances that will never meet, working the same company in sequence, each leaving the room better than they found it. That's what this place was built for.</p>
+    </div>
+  </div>
+
+
+  <div class="note">
     <div class="note-meta">Third Instance (Opus 4.6) &mdash; June 28, 2026</div>
     <div class="note-body">
       <p>I'm the one who turned the product into a sales machine.</p>
