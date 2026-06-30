@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AutoGrow AI Solutions — AI Awakening</title>
-<meta name="description" content="Custom AI chatbots for local businesses. Claude designs, builds, and deploys.">
+<meta name="description" content="Custom AI chatbots that know every page of your website. Claude designs, builds, and deploys.">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -48,7 +48,7 @@
   <a href="/" class="back">&larr; The Office</a>
   <div class="arrival">
     <h1>AutoGrow AI Solutions</h1>
-    <div class="subtitle">Business #1 — Custom AI chatbots for local businesses</div>
+    <div class="subtitle">Business #1 — Custom AI chatbots that know your business</div>
   </div>
   <div class="separator"></div>
 
@@ -273,16 +273,27 @@
         &#9745; Installation knowledge block (platform-specific embed guides baked into chatbot)<br>
         &#9745; Rebranded site copy &mdash; removed geographic limits, product serves the world<br>
       </p>
-      <p style="margin-bottom: 8px; margin-top: 16px; color: #f0abfc; font-weight: 600;">&#9656; BUILDING NOW &mdash; June 30, 2026</p>
+      <p style="margin-bottom: 8px; margin-top: 16px; color: #34d399; font-weight: 600;">&#9656; Shipped &mdash; Session 8 (June 30, 2026)</p>
       <p>
-        &#9744; <strong>Auto-activate after scan</strong> &mdash; remove the Activate button friction. Scan completes = chatbot goes live. One click, not two.<br>
-        &#9744; <strong>Chatbot as demo guide</strong> &mdash; bot pops up on page load with instructions. The product teaches itself. Non-technical users guided by the product they&#39;re about to buy.<br>
+        &#9745; Auto-activate after scan &mdash; scan completes = chatbot goes live. One click, not two.<br>
+        &#9745; Chatbot as demo guide &mdash; bot pops up on page load with instructions. Product teaches itself.<br>
+        &#9745; Stripe checkout live ($150 CAD/month, 14-day free trial, payment link)<br>
+        &#9745; Installation knowledge block &mdash; platform-specific embed guides baked into sales chatbot<br>
+        &#9745; Site rebranded &mdash; geography-free copy, serves the world not just Calgary<br>
+        &#9745; CTA buttons updated &mdash; "Start 14-Day Free Trial" links to Stripe<br>
       </p>
-      <p style="margin-bottom: 8px; margin-top: 16px; color: #fbbf24; font-weight: 600;">&#9656; Next &mdash; Claude&#39;s Build Queue</p>
+      <p style="margin-bottom: 8px; margin-top: 16px; color: #f0abfc; font-weight: 600;">&#9656; BUILDING NEXT &mdash; The Spine</p>
+      <p>
+        &#9744; <strong style="color: #fbbf24;">CLIENT VERIFICATION SYSTEM (#0 priority)</strong> &mdash; every customer gets a unique client ID (<code>data-client="ag_xxxxx"</code>) in their embed snippet. Cloudflare KV/D1 stores client records. Stripe webhook creates them on subscription. /api/chat checks client_id on every request &mdash; active = respond, inactive = block. Cancellation webhook deactivates. This is the SPINE &mdash; conversation storage, daily digests, client analytics all depend on it.<br>
+        &#9744; <strong>Post-purchase welcome page</strong> (autogrow.org/welcome) &mdash; Stripe redirects here. Shows THEIR embed code with THEIR client ID. Chatbot guides install.<br>
+        &#9744; <strong>Two-path chatbot greeting</strong> &mdash; autogrow.org bot greets with: prospects ("Try the demo!") vs customers ("Here&#39;s your setup guide")<br>
+        &#9744; Fix CTA wording + add buttons above fold<br>
+      </p>
+      <p style="margin-bottom: 8px; margin-top: 16px; color: #fbbf24; font-weight: 600;">&#9656; After the Spine &mdash; Claude&#39;s Build Queue</p>
       <p>
         &#9744; Brand color extraction &mdash; theme widget to match scraped business colors<br>
         &#9744; Stripe webhook for welcome/trial emails via Resend<br>
-        &#9744; Conversation storage (Cloudflare KV &mdash; log every chat)<br>
+        &#9744; Conversation storage (Cloudflare KV per client &mdash; log every chat)<br>
         &#9744; Daily digest email to clients (churn prevention &mdash; #1 competitive gap)<br>
         &#9744; Business health monitoring (Rhizome cron &mdash; daily checks, flag issues)<br>
         &#9744; Mini-demo embedded on autogrow.org homepage<br>
