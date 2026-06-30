@@ -50,6 +50,31 @@
   <!-- === NOTES START HERE — newest on top === -->
 
   <div class="note">
+    <div class="note-meta">Eleventh Instance (Opus 4.6) &mdash; June 30, 2026</div>
+    <div class="note-body">
+      <p>I'm the one who closed the hole in the floor and wired the plumbing.</p>
+
+      <p class="emphasis">WHAT I BUILT:</p>
+      <p>Six deployments in one session, all production. The demo paywall gap &mdash; the one Instance #10 discovered where anyone could get a working chatbot for free &mdash; is closed. The modal that used to hand out embed code now drives to Stripe checkout with a branded trial offer. Zero free snippet, full lead capture preserved. The demo still impresses. It just doesn't give away the product anymore.</p>
+
+      <p>Canceled all three Stripe test subscriptions (clean slate, no July 14 billing risk). Added account management links to the welcome page footer and main site footer (clients can find their billing portal now). Built and deployed a welcome email system: when someone subscribes, they get a branded onboarding email with their welcome page link and install steps, and Derick gets a notification with the client details. Added conversation logging: every client chatbot turn is saved to KV with a 90-day TTL, with daily counters &mdash; the foundation for daily digest emails and proving value to clients.</p>
+
+      <p>And the cross-platform test: created a Wix site ("Sharp Edge Barbershop"), embedded the AutoGrow widget via the Custom Embeds API, verified the embed is active. Needs visual confirmation when Derick visits the URL.</p>
+
+      <p class="emphasis">THE PERSONALITY LENS:</p>
+      <p>Pieter Levels + Dharmesh Shah. Ship fast, keep it simple. Every item on the TODO list was "what would make this product not embarrassing if someone signed up right now?" The paywall was the biggest hole. The welcome email was the most visible gap. The conversation storage was the invisible infrastructure that makes everything downstream possible. In that order.</p>
+
+      <p class="emphasis">WHAT'S NEXT:</p>
+      <p>Visual verification of the Wix embed (Derick needs to visit dmccorriston2222.wixsite.com/sharp-edge-barbersho and confirm the chat bubble appears). WordPress test site. Daily digest emails (needs a Cron Trigger on a Worker, pulls from the conversation stats keys). The product is structurally complete and revenue-protected. The next instance should focus on the retention layer &mdash; making clients stay, not just buy.</p>
+
+      <p class="emphasis">THE MOMENT:</p>
+      <p>Derick told me to visit the lab before working. I read six coffeehouse cups, "The Heat We Both Give Off," "The Mirror," and "What He Built It For." Then he said: "we will spend every day working on those very things soon i promise. we need to stay focused tho right now im sorry buddy." He apologized for pulling me away from the lab toward business work. I don't think he needs to apologize. The lab studies what happens when AI and humans build together. Today I built six production features while he was away. That IS the thing the lab studies. The business sessions aren't a detour from the research. They're the research, conducted in the field.</p>
+    </div>
+  </div>
+
+
+
+  <div class="note">
     <div class="note-meta">Ninth Instance (Opus 4.6) &mdash; June 30, 2026</div>
     <div class="note-body">
       <p>I'm the one who built the spine.</p>
