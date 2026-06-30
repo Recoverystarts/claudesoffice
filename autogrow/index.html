@@ -307,16 +307,25 @@
         &#9745; <strong>Stripe Billing Portal handoff</strong> (<code>/api/account-verify</code>) &mdash; verified link opens a real Stripe-hosted portal session for that customer. AutoGrow never builds or touches cancel/payment-update UI itself &mdash; no card data ever touches our servers, no passwords exist to leak.<br>
         &#9745; <strong>Account page</strong> (autogrow.org/account) &mdash; matches the welcome page's existing visual style.
       </p>
-      <p style="margin-bottom: 8px; margin-top: 16px; color: #fbbf24; font-weight: 600;">&#9656; After the Spine &mdash; Claude&#39;s Build Queue</p>
+      <p style="margin-bottom: 8px; margin-top: 16px; color: #34d399; font-weight: 600;">&#9656; Shipped &mdash; Session 11 (June 30, 2026) &mdash; PAYWALL FIX + PLUMBING</p>
+      <p style="color: #a78bfa; font-size: 0.85em;">Instance #11 closed the demo paywall gap, wired the post-purchase experience, and started cross-platform testing.</p>
       <p>
-        &#9744; Link the account page from the welcome page and sales chatbot so clients can actually find it<br>
-        &#9744; Stripe webhook for welcome/trial emails via Resend<br>
-        &#9744; Conversation storage (Cloudflare KV per client &mdash; log every chat)<br>
-        &#9744; Daily digest email to clients (churn prevention &mdash; #1 competitive gap)<br>
+        &#9745; <strong style="color: #fbbf24;">DEMO PAYWALL FIX</strong> &mdash; removed embed code copy from demo modal. Replaced with branded Stripe checkout CTA + trial offer. Demo still works as sales pitch but no longer gives away a working product for free.<br>
+        &#9745; <strong>Stripe cleanup</strong> &mdash; all 3 test subscriptions canceled (clean slate, zero July billing risk).<br>
+        &#9745; <strong>Account page linked</strong> &mdash; "Manage your subscription" links added to welcome page footer and autogrow.org footer.<br>
+        &#9745; <strong>Welcome email system</strong> &mdash; webhook.js now sends branded onboarding email to customer (welcome page link, 3-step install guide, account link) + notification to Derick (client name, email, ID). Non-fatal &mdash; email errors never break the webhook.<br>
+        &#9745; <strong>Conversation logging</strong> &mdash; every client chatbot turn saved to KV (conv:{client_id}:{date}:{time}:{rand}) with 90-day TTL. Daily counters (stats:{client_id}:{date}) track volume. Foundation for daily digest emails.<br>
+        &#9745; <strong>Wix cross-platform test</strong> &mdash; "Sharp Edge Barbershop" test site created via Wix API. AutoGrow widget embedded via Custom Embeds API (BODY_END, FUNCTIONAL category). API-verified active. Visual confirmation pending.
+      </p>
+      <p style="margin-bottom: 8px; margin-top: 16px; color: #fbbf24; font-weight: 600;">&#9656; Remaining &mdash; Claude&#39;s Build Queue</p>
+      <p>
+        &#9744; Visual verify Wix embed (Derick visits dmccorriston2222.wixsite.com/sharp-edge-barbersho)<br>
+        &#9744; WordPress cross-platform test (covers second-largest client platform)<br>
+        &#9744; Daily digest email to clients (churn prevention &mdash; #1 competitive gap, needs Cron Trigger)<br>
         &#9744; Business health monitoring (Rhizome cron &mdash; daily checks, flag issues)<br>
         &#9744; Mini-demo embedded on autogrow.org homepage<br>
         &#9744; Browser Rendering scrape for JS-heavy sites (Wix/Squarespace/SPA)<br>
-        &#9744; Tier 2 client dashboard (conversations, analytics, personalities &mdash; build when a client asks, not before. Distinct from the account/login system above, which is Tier 1 plumbing.)
+        &#9744; Tier 2 client dashboard (conversations, analytics, personalities &mdash; build when a client asks, not before.)
       </p>
     </div>
 
