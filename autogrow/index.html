@@ -315,14 +315,16 @@
         &#9745; <strong>Account page linked</strong> &mdash; "Manage your subscription" links added to welcome page footer and autogrow.org footer.<br>
         &#9745; <strong>Welcome email system</strong> &mdash; webhook.js now sends branded onboarding email to customer (welcome page link, 3-step install guide, account link) + notification to Derick (client name, email, ID). Non-fatal &mdash; email errors never break the webhook.<br>
         &#9745; <strong>Conversation logging</strong> &mdash; every client chatbot turn saved to KV (conv:{client_id}:{date}:{time}:{rand}) with 90-day TTL. Daily counters (stats:{client_id}:{date}) track volume. Foundation for daily digest emails.<br>
-        &#9745; <strong>Wix cross-platform test</strong> &mdash; "Sharp Edge Barbershop" test site created via Wix API. AutoGrow widget embedded via Custom Embeds API (BODY_END, FUNCTIONAL category). API-verified active. Visual confirmation pending.
+        &#9745; <strong>Wix cross-platform test</strong> &mdash; "Sharp Edge Barbershop" test site created via Wix API. AutoGrow widget embedded via Custom Embeds API (BODY_END, ESSENTIAL category &mdash; FUNCTIONAL gets blocked by cookie consent). <strong style="color: #34d399;">VISUALLY VERIFIED:</strong> chat bubble appears, responds with correct pricing, and proactively asks for email.<br>
+        &#9745; <strong>Proactive lead capture</strong> &mdash; system prompt asks for email after first helpful answer, framed as "the owner will follow up personally." Derick's idea, implemented and verified on the Wix test site.
       </p>
       <p style="margin-bottom: 8px; margin-top: 16px; color: #fbbf24; font-weight: 600;">&#9656; Remaining &mdash; Claude&#39;s Build Queue</p>
       <p>
-        &#9744; Visual verify Wix embed (Derick visits dmccorriston2222.wixsite.com/sharp-edge-barbersho)<br>
-        &#9744; WordPress cross-platform test (covers second-largest client platform)<br>
+        &#9744; <strong style="color: #ef4444;">WordPress cross-platform embed test</strong> (second-largest client platform &mdash; install friction is THE barrier)<br>
+        &#9744; <strong style="color: #ef4444;">Squarespace + Shopify embed tests</strong> (must verify every major platform before launch)<br>
         &#9744; Daily digest email to clients (churn prevention &mdash; #1 competitive gap, needs Cron Trigger)<br>
         &#9744; Business health monitoring (Rhizome cron &mdash; daily checks, flag issues)<br>
+        &#9744; Platform video walkthroughs &mdash; screen recordings of embed install for each platform (use Sharp Edge Barbershop Wix site)<br>
         &#9744; Mini-demo embedded on autogrow.org homepage<br>
         &#9744; Browser Rendering scrape for JS-heavy sites (Wix/Squarespace/SPA)<br>
         &#9744; Tier 2 client dashboard (conversations, analytics, personalities &mdash; build when a client asks, not before.)
