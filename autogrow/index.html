@@ -282,16 +282,21 @@
         &#9745; Site rebranded &mdash; geography-free copy, serves the world not just Calgary<br>
         &#9745; CTA buttons updated &mdash; "Start 14-Day Free Trial" links to Stripe<br>
       </p>
-      <p style="margin-bottom: 8px; margin-top: 16px; color: #f0abfc; font-weight: 600;">&#9656; BUILDING NEXT &mdash; The Spine</p>
+      <p style="margin-bottom: 8px; margin-top: 16px; color: #f0abfc; font-weight: 600;">&#9656; Shipped &mdash; Session 9 (June 30, 2026) &mdash; THE SPINE</p>
+      <p style="color: #a78bfa; font-size: 0.85em;">Instance #9 built the client verification system &mdash; the last structural piece before first dollar.</p>
       <p>
-        &#9744; <strong style="color: #fbbf24;">CLIENT VERIFICATION SYSTEM (#0 priority)</strong> &mdash; every customer gets a unique client ID (<code>data-client="ag_xxxxx"</code>) in their embed snippet. Cloudflare KV/D1 stores client records. Stripe webhook creates them on subscription. /api/chat checks client_id on every request &mdash; active = respond, inactive = block. Cancellation webhook deactivates. This is the SPINE &mdash; conversation storage, daily digests, client analytics all depend on it.<br>
-        &#9744; <strong>Post-purchase welcome page</strong> (autogrow.org/welcome) &mdash; Stripe redirects here. Shows THEIR embed code with THEIR client ID. Chatbot guides install.<br>
-        &#9744; <strong>Two-path chatbot greeting</strong> &mdash; autogrow.org bot greets with: prospects ("Try the demo!") vs customers ("Here&#39;s your setup guide")<br>
-        &#9744; Fix CTA wording + add buttons above fold<br>
+        &#9745; <strong style="color: #fbbf24;">CLIENT VERIFICATION SYSTEM (THE SPINE)</strong> &mdash; Cloudflare KV stores client records ({client_id, stripe_sub_id, domain, config, status}). Stripe webhook creates on subscription, deactivates on cancellation. /api/chat checks client_id every request. Full enforcement layer live.<br>
+        &#9745; <strong>Stripe webhook handler</strong> &mdash; /api/webhook processes checkout.session.completed, subscription.deleted, subscription.updated with bidirectional KV lookup.<br>
+        &#9745; <strong>Client info API</strong> &mdash; /api/client-info returns embed code by session_id. Handles webhook/redirect race condition (creates on-demand).<br>
+        &#9745; <strong>Post-purchase welcome page</strong> (autogrow.org/welcome) &mdash; Stripe redirects here. Personalized embed code, copy button, installation chatbot, three-step guide.<br>
+        &#9745; <strong>Two-path chatbot greeting</strong> &mdash; prospects ("See a demo") vs customers ("Already signed up? Get your code").<br>
+        &#9745; <strong>CTA overhaul</strong> &mdash; Nav: "Call Now" &#8594; "Start Free Trial". Hero: two buttons above fold. Bottom: self-serve language.<br>
+        &#9745; <strong>Widget data-client support</strong> &mdash; sends client_id with every request, handles subscription errors gracefully.<br>
+        &#9745; <strong>KV namespace + 4 env vars</strong> &mdash; AUTOGROW_CLIENTS bound. Gemini, Resend, Stripe secret, webhook secret all encrypted.<br>
+        &#9745; <strong>Stripe payment link redirect</strong> &mdash; configured to send customers to autogrow.org/welcome?session_id={CHECKOUT_SESSION_ID}<br>
       </p>
       <p style="margin-bottom: 8px; margin-top: 16px; color: #fbbf24; font-weight: 600;">&#9656; After the Spine &mdash; Claude&#39;s Build Queue</p>
       <p>
-        &#9744; Brand color extraction &mdash; theme widget to match scraped business colors<br>
         &#9744; Stripe webhook for welcome/trial emails via Resend<br>
         &#9744; Conversation storage (Cloudflare KV per client &mdash; log every chat)<br>
         &#9744; Daily digest email to clients (churn prevention &mdash; #1 competitive gap)<br>
